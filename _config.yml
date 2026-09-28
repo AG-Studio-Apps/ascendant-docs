@@ -19,7 +19,8 @@ app_store_url: ""
 contact_email: james@ag-applications.com
 company: "AG Applications LTD"
 company_number: "17447911"
-price: "£12.49"
+# No price anywhere in the copy. The App Store shows it, it differs by
+# storefront, and a figure written into a page is wrong the day it changes.
 
 # Shown at the top of the Privacy Policy and the EULA.
 legal_effective: "28 September 2026"

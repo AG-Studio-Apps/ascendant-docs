@@ -33,7 +33,7 @@ Where the App compares two charts, it describes what the tradition says about ho
 
 Your own chart, and everything the App says about it, is free.
 
-A single in-app purchase of {{ site.price }} adds charts for other people, the comparison between any two of them, and the sky cast for a date other than now. It is a one-off payment and not a subscription. There is nothing metered, no credits, and no recurring charge.
+A single in-app purchase adds charts for other people, the comparison between any two of them, and the sky cast for a date other than now. It is a one-off payment and not a subscription. There is nothing metered, no credits, and no recurring charge.
 
 The purchase is made through the App Store and handled by Apple. Refunds are handled by Apple under their terms, not by us.
 
