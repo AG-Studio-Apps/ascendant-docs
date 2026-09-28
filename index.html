@@ -1,0 +1,91 @@
+---
+layout: default
+title: Ascendant
+---
+
+<section class="hero">
+  <div>
+    <h1>The sky the minute you were born.</h1>
+    <p>A birth chart worked out from real planetary positions, and every placement
+       written out in full. Not a star sign. The whole chart.</p>
+    {% if site.app_store_url != "" %}
+    <p><a class="btn" href="{{ site.app_store_url }}">Get it on the App&nbsp;Store</a></p>
+    {% endif %}
+    <p class="note">iPhone and iPad. {{ site.price }} once, not a subscription.</p>
+  </div>
+  <figure class="hero__shot">
+    <img src="{{ '/assets/img/chart.png' | relative_url }}"
+         alt="A birth chart wheel in Ascendant, with the bodies placed around the zodiac."
+         width="660" height="1434">
+  </figure>
+</section>
+
+<section class="band">
+  <div class="band__inner">
+    <div>
+      <h2>Yours to the minute</h2>
+      <p>Born the same day as someone else and your charts still differ. The Moon moves a
+         degree every two hours, and the sign rising on the horizon turns a degree every
+         four minutes.</p>
+      <p>So the sky is cast for your minute and your place, never for your date. Positions
+         come from a vendored copy of the cosinekitty/astronomy library and agree with
+         Swiss Ephemeris to a fraction of an arcsecond.</p>
+    </div>
+    <figure>
+      <img src="{{ '/assets/img/reading.png' | relative_url }}"
+           alt="The reading screen, with the Sun, Moon and rising sign each explained."
+           width="660" height="1434" loading="lazy">
+    </figure>
+  </div>
+</section>
+
+<section class="band band--flip">
+  <div class="band__inner">
+    <div>
+      <h2>And how two charts meet</h2>
+      <p>Set your chart beside someone else's and see what draws the two of you together
+         and what pulls, contact by contact, in the terms astrologers have used for
+         centuries.</p>
+      <p>It says whether a pairing is easy, demanding or evenly matched, and it counts the
+         contacts the tradition names as deciding one. It will not give you a percentage,
+         because there is no honest arithmetic behind one.</p>
+    </div>
+    <figure>
+      <img src="{{ '/assets/img/compare.png' | relative_url }}"
+           alt="Two charts compared, headed with a verdict and a list of the contacts between them."
+           width="660" height="1434" loading="lazy">
+    </figure>
+  </div>
+</section>
+
+<section class="band">
+  <div class="band__inner">
+    <div>
+      <h2>It stays on your phone</h2>
+      <p>There is no account and no server of ours. Your birth details are stored on the
+         device and the chart is worked out there. Nothing about it is uploaded, and there
+         is nothing to delete anywhere but the app.</p>
+      <p>The one exception is typing a place: the name you type goes to Apple's geocoding
+         service to be turned into coordinates, the same way any Maps search does. Your
+         date, your time and your chart do not.</p>
+    </div>
+    <div>
+      <h2>Bought once</h2>
+      <p>Your own chart is free and stays free. One payment of {{ site.price }} adds other
+         people's charts, the comparison between any two, and the sky cast for any date
+         past or future.</p>
+      <p>Not a subscription, no credits, and nothing metered by the question.</p>
+    </div>
+  </div>
+</section>
+
+<section class="close">
+  <h2>Ascendant</h2>
+  <p>An astrology app for people who want the whole chart, written out properly, and kept
+     to themselves.</p>
+  {% if site.app_store_url != "" %}
+  <p><a class="btn" href="{{ site.app_store_url }}">Get it on the App&nbsp;Store</a></p>
+  {% else %}
+  <p><a href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a></p>
+  {% endif %}
+</section>

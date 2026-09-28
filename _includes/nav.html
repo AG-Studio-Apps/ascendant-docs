@@ -1,0 +1,12 @@
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <a class="nav__brand" href="{{ '/' | relative_url }}">
+    <img src="{{ '/assets/img/icon-512.png' | relative_url }}" alt="" width="34" height="34">
+    <span>Ascendant</span>
+  </a>
+  <nav aria-label="Main">
+    <a href="{{ '/privacy/' | relative_url }}"{% if page.url contains '/privacy' %} aria-current="page"{% endif %}>Privacy</a>
+    <a href="{{ '/eula/' | relative_url }}"{% if page.url contains '/eula' %} aria-current="page"{% endif %}>Licence</a>
+    {% if site.app_store_url != "" %}<a class="btn btn--small" href="{{ site.app_store_url }}">App&nbsp;Store</a>{% endif %}
+  </nav>
+</header>

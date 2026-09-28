@@ -1,0 +1,147 @@
+/* Ascendant.
+   The app's own palette and a serif, because the thing being sold is reading.
+   No cards, no shadows, no rounded tiles: the page is set like a page, and
+   what separates one section from the next is space and a hairline. */
+
+:root {
+  --ground: #0D1115;
+  --raised: #12171D;
+  --ink:    #DDE3E8;
+  --muted:  #8792A0;
+  --brass:  #B08D4F;
+  --line:   #1E252D;
+  --measure: 34rem;
+  --wide: 62rem;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: Newsreader, Georgia, "Times New Roman", serif;
+  font-size: 1.125rem;
+  line-height: 1.65;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--brass); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: #C9A768; }
+
+img { max-width: 100%; height: auto; display: block; }
+
+.skip {
+  position: absolute; left: -9999px;
+  background: var(--brass); color: var(--ground); padding: .6rem 1rem;
+}
+.skip:focus { left: 1rem; top: 1rem; z-index: 10; }
+
+/* Navigation ------------------------------------------------------------- */
+
+.nav {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1rem; flex-wrap: wrap;
+  max-width: var(--wide); margin: 0 auto; padding: 1.4rem 1.5rem;
+}
+.nav__brand {
+  display: flex; align-items: center; gap: .65rem;
+  color: var(--ink); text-decoration: none; font-size: 1.15rem; letter-spacing: .01em;
+}
+.nav__brand img { border-radius: 8px; }
+.nav nav { display: flex; align-items: center; gap: 1.5rem; font-size: .95rem; }
+.nav nav a { color: var(--muted); text-decoration: none; }
+.nav nav a:hover, .nav nav a[aria-current] { color: var(--ink); }
+
+/* The one button shape on the site. */
+.btn {
+  display: inline-block; background: var(--brass); color: var(--ground);
+  text-decoration: none; padding: .85rem 1.6rem; border-radius: 9px;
+  font-size: 1.02rem;
+}
+.btn:hover { background: #C9A768; color: var(--ground); }
+.btn--small { padding: .45rem 1rem; font-size: .9rem; }
+
+/* The opening ------------------------------------------------------------ */
+
+.hero {
+  max-width: var(--wide); margin: 0 auto; padding: 4rem 1.5rem 3rem;
+  display: grid; gap: 3rem; align-items: center;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 60rem) { .hero { grid-template-columns: 1.05fr .95fr; padding-top: 5.5rem; } }
+
+.hero h1 {
+  font-size: clamp(2.6rem, 6vw, 4rem); line-height: 1.08; font-weight: 400;
+  margin: 0 0 1.1rem; letter-spacing: -0.015em;
+}
+.hero p { color: var(--muted); font-size: 1.24rem; margin: 0 0 1rem; max-width: 30rem; }
+.hero .note { font-size: .96rem; margin-top: 1.6rem; }
+.hero__shot { justify-self: center; max-width: 21rem; }
+.hero__shot img { border-radius: 26px; border: 1px solid var(--line); }
+
+/* Sections --------------------------------------------------------------- */
+
+.band { border-top: 1px solid var(--line); }
+.band__inner {
+  max-width: var(--wide); margin: 0 auto; padding: 4rem 1.5rem;
+  display: grid; gap: 2.5rem; align-items: center; grid-template-columns: 1fr;
+}
+@media (min-width: 60rem) {
+  .band__inner { grid-template-columns: 1fr 1fr; gap: 4rem; }
+  .band--flip .band__inner > figure { order: -1; }
+}
+.band h2 { font-size: 1.85rem; font-weight: 400; margin: 0 0 .9rem; letter-spacing: -0.01em; }
+.band p { color: var(--muted); margin: 0 0 1rem; max-width: var(--measure); }
+.band figure { margin: 0; justify-self: center; max-width: 19rem; }
+.band figure img { border-radius: 22px; border: 1px solid var(--line); }
+
+/* A quiet closing statement, not a call to action shouted twice. */
+.close {
+  border-top: 1px solid var(--line);
+  text-align: center; padding: 4.5rem 1.5rem;
+}
+.close h2 { font-size: 2rem; font-weight: 400; margin: 0 0 .8rem; }
+.close p { color: var(--muted); max-width: 32rem; margin: 0 auto 1.8rem; }
+
+/* Long-form pages -------------------------------------------------------- */
+
+.prose { max-width: var(--measure); margin: 0 auto; padding: 3.5rem 1.5rem 4rem; }
+.prose h1 { font-size: 2.3rem; font-weight: 400; margin: 0 0 .6rem; letter-spacing: -0.01em; }
+.prose__lede { color: var(--muted); font-size: 1.15rem; margin: 0 0 .4rem; }
+.prose__meta { color: var(--muted); font-size: .92rem; margin: 0 0 2.5rem; }
+.prose h2 {
+  font-size: 1.3rem; font-weight: 500; margin: 2.6rem 0 .7rem;
+  padding-top: 1.6rem; border-top: 1px solid var(--line);
+}
+.prose h3 { font-size: 1.08rem; font-weight: 500; margin: 1.8rem 0 .5rem; }
+.prose p, .prose li { color: #C2CAD3; }
+.prose ul { padding-left: 1.2rem; }
+.prose li { margin-bottom: .45rem; }
+.prose strong { color: var(--ink); font-weight: 500; }
+
+/* Footer ----------------------------------------------------------------- */
+
+.foot { border-top: 1px solid var(--line); }
+.foot__inner { max-width: var(--wide); margin: 0 auto; padding: 2.5rem 1.5rem 3.5rem; }
+.foot__mark { margin: 0 0 .9rem; font-size: 1.05rem; }
+.foot nav { display: flex; gap: 1.4rem; flex-wrap: wrap; font-size: .95rem; margin-bottom: 1.4rem; }
+.foot nav a { color: var(--muted); text-decoration: none; }
+.foot nav a:hover { color: var(--ink); }
+.foot__legal { color: var(--muted); font-size: .86rem; margin: 0; }
+
+/* Two devices the legal pages need and nothing else does. Named for the
+   pages they belong to: called `.note`, this rule reached the hero's price
+   line and put a brass rule down the side of it. */
+.legal-note, .short {
+  border-left: 2px solid var(--brass);
+  padding: .1rem 0 .1rem 1.1rem;
+  margin: 0 0 2rem;
+}
+.legal-note { color: var(--muted); font-size: .96rem; }
+.short { color: #C2CAD3; }
+.short strong, .legal-note strong { color: var(--ink); font-weight: 500; }
+.prose ol { padding-left: 1.2rem; }

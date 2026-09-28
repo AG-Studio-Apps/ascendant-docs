@@ -1,0 +1,47 @@
+title: Ascendant
+tagline: The sky the minute you were born.
+description: >-
+  Ascendant is a native iPhone and iPad astrology app. A birth chart worked out from real
+  planetary positions, every placement written out in full, and two charts read against each
+  other. One payment, no subscription, and nothing about your chart leaves the phone.
+lang: en-GB
+
+# No custom domain. A project site lives under the repository name, so both of
+# these change together if the repository is ever renamed.
+url: "https://ag-studio-apps.github.io"
+baseurl: "/ascendant-docs"
+
+# Set to the App Store listing on release. Every button that points at the
+# store stays hidden while this is empty, so the site is never a link to
+# nothing.
+app_store_url: ""
+
+contact_email: james@ag-applications.com
+company: "AG Applications LTD"
+company_number: "17447911"
+price: "£12.49"
+
+# Shown at the top of the Privacy Policy and the EULA.
+legal_effective: "28 September 2026"
+legal_version: "1.0"
+
+markdown: kramdown
+kramdown:
+  input: GFM
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+defaults:
+  - scope: { path: "", type: "pages" }
+    values: { layout: "page" }
+
+social:
+  name: Ascendant
+logo: /assets/img/icon-512.png
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor

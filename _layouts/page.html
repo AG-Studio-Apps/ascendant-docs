@@ -1,0 +1,11 @@
+---
+layout: default
+---
+<article class="prose">
+  <h1>{{ page.title }}</h1>
+  {% if page.subtitle %}<p class="prose__lede">{{ page.subtitle }}</p>{% endif %}
+  {% if page.legal %}
+  <p class="prose__meta">Version {{ site.legal_version }}. In effect from {{ site.legal_effective }}.</p>
+  {% endif %}
+  {{ content }}
+</article>
